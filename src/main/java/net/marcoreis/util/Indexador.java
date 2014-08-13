@@ -44,9 +44,9 @@ public class Indexador {
             Directory d = new SimpleFSDirectory(diretorio);
             logger.info("Diretorio do indice: " + diretorioDosIndices);
             // {6}
-            Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_47);
+            Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_48);
             // {7}
-            IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_47,
+            IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_48,
                     analyzer);
             // {8}
             writer = new IndexWriter(d, config);

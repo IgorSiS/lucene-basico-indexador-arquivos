@@ -32,9 +32,9 @@ public class Buscador {
             IndexReader leitor = DirectoryReader.open(diretorio);
             // {2}
             IndexSearcher buscador = new IndexSearcher(leitor);
-            Analyzer analisador = new StandardAnalyzer(Version.LUCENE_47);
+            Analyzer analisador = new StandardAnalyzer(Version.LUCENE_48);
             // {3}
-            QueryParser parser = new QueryParser(Version.LUCENE_47, "Texto",
+            QueryParser parser = new QueryParser(Version.LUCENE_48, "Texto",
                     analisador);
             Query consulta = parser.parse(parametro);
             long inicio = System.currentTimeMillis();
